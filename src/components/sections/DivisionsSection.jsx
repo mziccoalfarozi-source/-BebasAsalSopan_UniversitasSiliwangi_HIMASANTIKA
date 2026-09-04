@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft, X, Target, Briefcase, Users } from "lucide-react";
 import { useState, useEffect, useCallback, useRef } from "react";
 
-const COLORS = { primary: "#0033A0", accent: "#FFD700" };
+const COLORS = { primary: "#101869", accent: "#F9F9FB" };
 
 // ============================================
 // DATA DIVISI — foto member bisa diisi nanti
@@ -18,7 +18,7 @@ const divisions = [
       "Pimpinan tertinggi HIMASANTIKA yang terdiri dari Bupati, Wakil Bupati, Sekretaris, Bendahara, dan jajarannya. Bertanggung jawab atas arah gerak dan administrasi organisasi secara keseluruhan.",
     image: "/assets/logos/DepartemenPO.png",
     members: "6 Jabatan",
-    color: "#0033A0",
+    color: "#101869",
     detail:
       "BPH merupakan inti dari kepengurusan HIMASANTIKA. Mereka yang menentukan visi, arah kebijakan, dan memastikan seluruh departemen bergerak sinergi menuju satu tujuan. Setiap keputusan strategis, dari program kerja besar hingga representasi himpunan ke luar, selalu melewati BPH.",
     proker: [
@@ -42,7 +42,7 @@ const divisions = [
       "Menampung dan menyalurkan aspirasi mahasiswa melalui forum internal, serta berkoordinasi dengan Kaprodi S1 Teknik Informatika untuk penindaklanjutan.",
     image: "/assets/logos/LembagaAdvokasi.png",
     members: "Koordinasi Rutin",
-    color: "#1a56db",
+    color: "#C3503B",
     detail:
       "Lembaga Advokasi adalah suara mahasiswa Teknik Informatika UMC. Mereka hadir untuk memastikan setiap keluhan, masukan, dan aspirasi mahasiswa didengar dan ditindaklanjuti. Dari masalah kurikulum, dosen, hingga fasilitas kampus — semua bisa dibawa ke Advokasi.",
     proker: [
@@ -65,7 +65,7 @@ const divisions = [
       "Mengembangkan minat dan bakat profesi jurusan, mendata mahasiswa berbakat di bidang teknologi, dan menyalurkannya ke berbagai perlombaan.",
     image: "/assets/logos/LembagaMinatBakat.png",
     members: "Porseni & Lomba",
-    color: "#7e22ce",
+    color: "#101869",
     detail:
       "Lembaga Minat Bakat hadir untuk mewadahi talenta mahasiswa TI yang tak hanya cerdas akademik, tapi juga berprestasi di bidang lain. Dari lomba programming, UI/UX, hackathon, hingga olahraga dan seni — LMB memastikan setiap mahasiswa punya ruang untuk bersinar.",
     proker: [
@@ -88,7 +88,7 @@ const divisions = [
       "Menyusun dan melaksanakan SOP kaderisasi HIMASANTIKA serta meningkatkan kualitas kaderisasi untuk mencetak pengurus yang berkompeten.",
     image: "/assets/logos/DepartemenKaderisasi.png",
     members: "SOP & Pelatihan",
-    color: "#b45309",
+    color: "#C3503B",
     detail:
       "Kaderisasi adalah jantungnya regenerasi HIMASANTIKA. Tanpa kader yang kuat dan berkarakter, organisasi tidak akan berkelanjutan. Departemen ini memastikan bahwa setiap mahasiswa baru yang bergabung mendapatkan proses pembinaan yang terstruktur, humanis, dan berorientasi pada pengembangan diri.",
     proker: [
@@ -111,7 +111,7 @@ const divisions = [
       "Pusat informasi dan komunikasi yang mengelola media sosial, meliput kegiatan, dan membuat KTP pengurus sebagai identitas resmi.",
     image: "/assets/logos/DepartemenDokominfo.png",
     members: "Media & Publikasi",
-    color: "#0e7490",
+    color: "#101869",
     detail:
       "DOKOMINFO adalah wajah digital HIMASANTIKA. Mereka yang memastikan setiap kegiatan terdokumentasi, setiap informasi tersebar tepat waktu, dan brand HIMASANTIKA terjaga konsistensinya di media sosial. Dari konten kreatif, desain grafis, fotografi, hingga videografi — semua ada di tangan DOKOMINFO.",
     proker: [
@@ -134,7 +134,7 @@ const divisions = [
       "Mengadakan evaluasi per departemen, kajian AD/ART, dan merancang SOP organisasi sesuai dengan pedoman yang telah ditetapkan.",
     image: "/assets/logos/DepartemenPO.png",
     members: "Evaluasi & SOP",
-    color: "#15803d",
+    color: "#C3503B",
     detail:
       "Departemen PO adalah think-tank-nya HIMASANTIKA. Mereka memastikan organisasi tidak stagnan — selalu ada evaluasi, pembaruan aturan, dan peningkatan sistem. Kajian AD/ART yang mereka lakukan menjadi landasan hukum organisasi, sementara SOP yang disusun menjadi panduan kerja seluruh departemen.",
     proker: [
@@ -157,7 +157,7 @@ const divisions = [
       "Berkoordinasi dengan Kaprodi mengenai akademik dan mengadakan workshop, seminar, serta bootcamp untuk mengembangkan profesi jurusan.",
     image: "/assets/logos/DepartemenDikmas.png",
     members: "Workshop & Seminar",
-    color: "#be185d",
+    color: "#101869",
     detail:
       "Dikmas hadir untuk menjembatani dunia kampus dengan dunia industri teknologi. Di sinilah mahasiswa TI mendapatkan ilmu-ilmu praktikal — mulai dari web development, UI/UX design, machine learning, hingga soft skill seperti public speaking dan project management.",
     proker: [
@@ -180,7 +180,7 @@ const divisions = [
       "Mengabdikan diri kepada masyarakat, menjalin relasi dengan ormawa UMC, dan menjadi sumber informasi terkait PERMIKOMNAS.",
     image: "/assets/logos/DepartemenHubeksos.png",
     members: "Eksternal & Sosial",
-    color: "#0f766e",
+    color: "#C3503B",
     detail:
       "HUBEKSOS adalah jembatan antara HIMASANTIKA dengan dunia luar. Mereka yang membangun dan merawat hubungan baik dengan organisasi mahasiswa lain, baik di lingkungan UMC maupun di tingkat nasional melalui PERMIKOMNAS.",
     proker: [
@@ -203,7 +203,7 @@ const divisions = [
       "Membangun relasi dengan mitra strategis, menjadi badan usaha milik himpunan, dan mencari dana halal untuk kemajuan HIMASANTIKA.",
     image: "/assets/logos/DepartemenBismit.png",
     members: "Kemitraan & Dana",
-    color: "#92400e",
+    color: "#101869",
     detail:
       "BISMIT adalah departemen yang memastikan HIMASANTIKA tidak hanya bergantung pada dana kemahasiswaan. Mereka aktif mencari sponsor, membangun kemitraan strategis dengan perusahaan teknologi, dan mengelola usaha himpunan.",
     proker: [
@@ -225,7 +225,7 @@ const divisions = [
 // HELPER: avatar warna dari nama
 // ============================================
 function getAvatarBg(name) {
-  const palette = ["#0033A0","#1a56db","#7e22ce","#be185d","#b45309","#15803d","#0e7490","#0f766e","#92400e","#dc2626"];
+  const palette = ["#101869", "#C3503B"];
   let h = 0;
   for (let i = 0; i < name.length; i++) h = name.charCodeAt(i) + ((h << 5) - h);
   return palette[Math.abs(h) % palette.length];
