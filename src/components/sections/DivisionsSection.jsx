@@ -102,6 +102,7 @@ const divisions = [
       { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/3.jpg" },
       { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/4.jpg" },
       { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/5.jpg" },
+      { nama: "Media 6", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/6.jpg" },
     ],
   },
   {
