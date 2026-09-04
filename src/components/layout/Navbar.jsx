@@ -120,26 +120,6 @@ export default function Navbar() {
                 </motion.li>
               ))}
 
-              {/* CTA Button Desktop */}
-              <motion.li
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7, duration: 0.4 }}
-              >
-                <Link
-                  href="#kontak"
-                  className={`
-                    px-5 py-2.5 rounded-full text-sm font-semibold
-                    transition-all duration-300
-                    ${isScrolled
-                      ? "bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/25"
-                      : "bg-white text-blue-600 hover:bg-white/90 hover:scale-105"
-                    }
-                  `}
-                >
-                  Bergabung
-                </Link>
-              </motion.li>
             </ul>
 
             {/* ================================== */}
@@ -189,21 +169,6 @@ export default function Navbar() {
                 </motion.div>
               ))}
 
-              {/* CTA Mobile */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.25 }}
-                className="pt-4"
-              >
-                <Link
-                  href="#kontak"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-center px-4 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Bergabung dengan Kami
-                </Link>
-              </motion.div>
             </div>
           </motion.div>
         )}

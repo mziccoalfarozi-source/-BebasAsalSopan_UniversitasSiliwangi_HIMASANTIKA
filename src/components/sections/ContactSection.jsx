@@ -91,7 +91,7 @@ export default function ContactSection() {
                     id="name"
                     required
                     placeholder="Masukkan nama Anda"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-slate-900"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   />
@@ -103,7 +103,7 @@ export default function ContactSection() {
                     id="email"
                     required
                     placeholder="nama@email.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-slate-900"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
@@ -115,7 +115,7 @@ export default function ContactSection() {
                     required
                     rows={4}
                     placeholder="Tulis pesan atau pertanyaan Anda di sini..."
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none text-slate-900"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
@@ -150,12 +150,12 @@ export default function ContactSection() {
                 <MapPin size={24} className="text-amber-500 shrink-0" />
                 <div>
                   <h4 className="font-bold text-slate-900">Sekretariat HIMASANTIKA</h4>
-                  <p className="text-sm text-slate-500 mt-1">Kampus 1 UMC, Jl. Tujuh Pahlawan Revolusi No. 70, Cirebon, Jawa Barat</p>
+                  <p className="text-sm text-slate-500 mt-1">Kampus 2 UMC, Jl. Fatahillah, Watubelah, Cirebon, Jawa Barat</p>
                 </div>
               </div>
               <div className="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-200">
                 <iframe
-                  src="https://maps.google.com/maps?q=Universitas%20Muhammadiyah%20Cirebon&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Universitas%20Muhammadiyah%20Cirebon%20Kampus%202&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

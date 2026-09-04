@@ -26,19 +26,19 @@ const itemVariants = {
 };
 
 const marqueeImagesRow1 = [
-  "/assets/galeri/PhotoshootStrukturHIMASANTIKA.jpg",
-  "/assets/galeri/BukberdanFamilyGathering1.jpg",
-  "/assets/galeri/BukberdanFamilyGathering.jpg",
-  "/assets/galeri/FotoBersamaRamadhan.jpg",
-  "/assets/galeri/MengenalOrganisasiTeknikInformatika2025.jpg",
+  "/assets/galeri/PhotoshootStrukturHIMASANTIKA.webp",
+  "/assets/galeri/BukberdanFamilyGathering1.webp",
+  "/assets/galeri/BukberdanFamilyGathering.webp",
+  "/assets/galeri/FotoBersamaRamadhan.webp",
+  "/assets/galeri/MengenalOrganisasiTeknikInformatika2025.webp",
 ];
 
 const marqueeImagesRow2 = [
-  "/assets/galeri/OpenRecruitmenHIMASANTIKA.jpg",
-  "/assets/galeri/KajianPublicSpeaking2025.jpg",
-  "/assets/galeri/StudiBanding1.jpg",
-  "/assets/galeri/StudiBanding2.jpg",
-  "/assets/galeri/StudiBanding3.jpg",
+  "/assets/galeri/OpenRecruitmenHIMASANTIKA.webp",
+  "/assets/galeri/KajianPublicSpeaking2025.webp",
+  "/assets/galeri/StudiBanding1.webp",
+  "/assets/galeri/StudiBanding2.webp",
+  "/assets/galeri/StudiBanding3.webp",
 ];
 
 // ============================================
@@ -66,7 +66,7 @@ export default function HeroSection() {
         >
           {[...marqueeImagesRow1, ...marqueeImagesRow2, ...marqueeImagesRow1, ...marqueeImagesRow2].map((src, i) => (
             <div key={i} className="relative w-64 sm:w-80 md:w-96 aspect-video rounded-3xl overflow-hidden shrink-0 border border-slate-200">
-              <Image src={src} alt="Gallery" fill className="object-cover" sizes="33vw" />
+              <Image src={src} alt="Gallery" fill priority={src.includes("PhotoshootStrukturHIMASANTIKA")} className="object-cover" sizes="33vw" />
             </div>
           ))}
         </motion.div>
@@ -79,7 +79,7 @@ export default function HeroSection() {
         >
           {[...marqueeImagesRow2, ...marqueeImagesRow1, ...marqueeImagesRow2, ...marqueeImagesRow1].map((src, i) => (
             <div key={i} className="relative w-64 sm:w-80 md:w-96 aspect-video rounded-3xl overflow-hidden shrink-0 border border-slate-200">
-              <Image src={src} alt="Gallery" fill className="object-cover" sizes="33vw" />
+              <Image src={src} alt="Gallery" fill priority={src.includes("PhotoshootStrukturHIMASANTIKA")} className="object-cover" sizes="33vw" />
             </div>
           ))}
         </motion.div>
@@ -92,7 +92,7 @@ export default function HeroSection() {
         >
           {[...marqueeImagesRow1, ...marqueeImagesRow2, ...marqueeImagesRow1, ...marqueeImagesRow2].reverse().map((src, i) => (
             <div key={i} className="relative w-64 sm:w-80 md:w-96 aspect-video rounded-3xl overflow-hidden shrink-0 border border-slate-200">
-              <Image src={src} alt="Gallery" fill className="object-cover" sizes="33vw" />
+              <Image src={src} alt="Gallery" fill priority={src.includes("PhotoshootStrukturHIMASANTIKA")} className="object-cover" sizes="33vw" />
             </div>
           ))}
         </motion.div>
@@ -105,7 +105,7 @@ export default function HeroSection() {
         >
           {[...marqueeImagesRow2, ...marqueeImagesRow1, ...marqueeImagesRow2, ...marqueeImagesRow1].map((src, i) => (
             <div key={i} className="relative w-64 sm:w-80 md:w-96 aspect-video rounded-3xl overflow-hidden shrink-0 border border-slate-200">
-              <Image src={src} alt="Gallery" fill className="object-cover" sizes="33vw" />
+              <Image src={src} alt="Gallery" fill priority={src.includes("PhotoshootStrukturHIMASANTIKA")} className="object-cover" sizes="33vw" />
             </div>
           ))}
         </motion.div>
@@ -128,10 +128,10 @@ export default function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative w-full flex flex-col items-center text-center p-4 sm:p-8"
+          className="relative w-fit mx-auto max-w-[95vw] md:max-w-4xl flex flex-col items-center text-center bg-white/50 backdrop-blur-xl border border-white/60 px-6 py-10 sm:px-12 sm:py-14 rounded-[2rem] shadow-2xl"
         >
           {/* HEADLINE UTAMA (Typing Effect + Drop Shadow) */}
-          <h1 className="z-10 text-4xl sm:text-6xl lg:text-[5rem] font-extrabold text-slate-900 leading-[1.1] tracking-tight mb-8 drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
+          <h1 className="z-10 text-4xl sm:text-6xl lg:text-[5rem] font-extrabold text-slate-900 leading-[1.1] tracking-tight mb-6">
             {"Kreativitas, Solidaritas,".split("").map((char, index) => (
               <motion.span
                 key={index}
@@ -147,7 +147,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 + "Kreativitas, Solidaritas,".length * 0.04 + 0.3, duration: 0.8, type: "spring" }}
-              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 drop-shadow-[0_0_10px_rgba(255,255,255,1)]"
+              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 drop-shadow-[0_4px_12px_rgba(251,191,36,0.4)]"
             >
               & Inovasi.
             </motion.span>
@@ -156,7 +156,7 @@ export default function HeroSection() {
           {/* SUB-HEADLINE */}
           <motion.p
             variants={itemVariants}
-            className="z-10 text-base sm:text-xl text-slate-700 leading-relaxed max-w-2xl font-semibold mb-0 drop-shadow-[0_0_15px_rgba(255,255,255,1)]"
+            className="z-10 text-sm sm:text-lg text-slate-700 leading-relaxed max-w-2xl font-medium mb-0"
           >
             Wadah kolaborasi tanpa batas untuk mahasiswa Teknik Informatika Universitas Muhammadiyah Cirebon. Bersama menciptakan dampak nyata.
           </motion.p>

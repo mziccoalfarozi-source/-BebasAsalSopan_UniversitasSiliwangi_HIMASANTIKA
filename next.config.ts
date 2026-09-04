@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    qualities: [25, 40, 50, 75, 80, 100],
     deviceSizes: [640, 828, 1080, 1200, 1920],
     imageSizes: [64, 128, 256, 384],
     minimumCacheTTL: 3600, // cache 1 jam

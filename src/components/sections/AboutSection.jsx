@@ -30,20 +30,10 @@ const staggerContainer = {
 // ============================================
 const slides = [
   {
-    src: "/assets/galeri/PhotoshootStrukturHIMASANTIKA.jpg",
-    alt: "Photoshoot Struktur HIMASANTIKA",
-    caption: "Struktur Pengurus HIMASANTIKA",
-  },
-  {
-    src: "/assets/galeri/MengenalOrganisasiTeknikInformatika2025.jpg",
-    alt: "Mengenal Organisasi Teknik Informatika 2025",
-    caption: "Mengenal Organisasi TI 2025",
-  },
-  {
-    src: "/assets/galeri/BukberdanFamilyGathering1.jpg",
-    alt: "Buka Bersama dan Family Gathering HIMASANTIKA",
-    caption: "Kebersamaan Anggota HIMASANTIKA",
-  },
+    src: "/assets/galeri/StudiBanding2.webp",
+    alt: "Studi Banding x HIMA-TI UNIKU",
+    caption: "Studi Banding x HIMA-TI UNIKU",
+  }
 ];
 
 // ============================================
@@ -91,6 +81,8 @@ function ImageSlider() {
     exit: (dir) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] } }),
   };
 
+  const safeCurrent = current >= slides.length ? 0 : current;
+
   return (
     <div
       className="relative group"
@@ -100,17 +92,23 @@ function ImageSlider() {
       {/* Frame dekoratif */}
       <div className="absolute -inset-4 bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl rotate-2 opacity-20 group-hover:rotate-3 transition-transform duration-500" />
 
-      {/* Slider Container — rasio 16:9 agar foto tidak kepotong */}
       <div
-        className="relative w-full rounded-2xl overflow-hidden shadow-2xl"
-        style={{ aspectRatio: "16/9" }}
+        className="relative w-full rounded-2xl overflow-hidden shadow-2xl aspect-square sm:aspect-[4/5] lg:aspect-[3/4] xl:aspect-[4/5] cursor-grab active:cursor-grabbing"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={(e) => { touchStartX.current = e.clientX; }}
+        onMouseUp={(e) => {
+          if (touchStartX.current === null) return;
+          const diff = touchStartX.current - e.clientX;
+          if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
+          touchStartX.current = null;
+        }}
+        onMouseLeave={() => { touchStartX.current = null; }}
       >
         {/* Slides */}
         <AnimatePresence custom={direction} initial={false} mode="popLayout">
           <motion.div
-            key={current}
+            key={safeCurrent}
             custom={direction}
             variants={slideVariants}
             initial="enter"
@@ -119,11 +117,11 @@ function ImageSlider() {
             className="absolute inset-0"
           >
             <Image
-              src={slides[current].src}
-              alt={slides[current].alt}
+              src={slides[safeCurrent].src}
+              alt={slides[safeCurrent].alt}
               fill
-              loading={current === 0 ? "eager" : "lazy"}
-              priority={current === 0}
+              loading={safeCurrent === 0 ? "eager" : "lazy"}
+              priority={safeCurrent === 0}
               quality={75}
               className="object-cover object-top"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
@@ -138,7 +136,7 @@ function ImageSlider() {
         <div className="absolute bottom-4 left-4 right-14 z-20">
           <AnimatePresence mode="wait">
             <motion.div
-              key={current}
+              key={safeCurrent}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -146,43 +144,31 @@ function ImageSlider() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs sm:text-sm font-medium"
             >
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
-              {slides[current].caption}
+              {slides[safeCurrent].caption}
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Arrow Buttons */}
-        <button
-          onClick={prev}
-          aria-label="Slide sebelumnya"
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/40 text-white backdrop-blur-sm border border-white/20 hover:bg-black/60 transition-all duration-200 opacity-0 group-hover:opacity-100 hover:scale-110"
-        >
-          <ChevronLeft size={20} />
-        </button>
-        <button
-          onClick={next}
-          aria-label="Slide berikutnya"
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/40 text-white backdrop-blur-sm border border-white/20 hover:bg-black/60 transition-all duration-200 opacity-0 group-hover:opacity-100 hover:scale-110"
-        >
-          <ChevronRight size={20} />
-        </button>
+
       </div>
 
-      {/* Dot Indicators */}
-      <div className="flex justify-center gap-2 mt-4">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            aria-label={`Ke slide ${i + 1}`}
-            onClick={() => goTo(i, i > current ? 1 : -1)}
-            className={`transition-all duration-300 rounded-full ${
-              i === current
-                ? "w-6 h-2 bg-blue-900"
-                : "w-2 h-2 bg-slate-300 hover:bg-slate-400"
-            }`}
-          />
-        ))}
-      </div>
+      {/* Dot Indicators - Hanya tampil jika slide lebih dari 1 */}
+      {slides.length > 1 && (
+        <div className="flex justify-center gap-2 mt-4">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Ke slide ${i + 1}`}
+              onClick={() => goTo(i, i > current ? 1 : -1)}
+              className={`transition-all duration-300 rounded-full ${
+                i === current
+                  ? "w-6 h-2 bg-blue-900"
+                  : "w-2 h-2 bg-slate-300 hover:bg-slate-400"
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -316,22 +302,7 @@ export default function AboutSection() {
           >
             <ImageSlider />
 
-            {/* Stats mini di bawah gambar */}
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { value: "100+", label: "Anggota Aktif" },
-                { value: "15+", label: "Program Kerja" },
-                { value: "2012", label: "Tahun Berdiri" },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="text-center py-4 px-2 rounded-xl bg-white border border-slate-200 shadow-sm"
-                >
-                  <div className="text-xl sm:text-2xl font-extrabold text-blue-900">{s.value}</div>
-                  <div className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-medium">{s.label}</div>
-                </div>
-              ))}
-            </div>
+
           </motion.div>
         </div>
       </div>

@@ -1,21 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Images } from "lucide-react";
 
 const galleryItems = [
-  { id: 1, src: "/assets/galeri/PhotoshootStrukturHIMASANTIKA.jpg", caption: "Photoshoot Struktur HIMASANTIKA", tag: "Organisasi" },
-  { id: 2, src: "/assets/galeri/BukberdanFamilyGathering1.jpg", caption: "Buka Bersama & Family Gathering", tag: "Sosial" },
-  { id: 3, src: "/assets/galeri/BukberdanFamilyGathering.jpg", caption: "Buka Bersama & Family Gathering (2)", tag: "Sosial" },
-  { id: 4, src: "/assets/galeri/FotoBersamaRamadhan.jpg", caption: "Menyambut Bulan Suci Ramadhan", tag: "Sosial" },
-  { id: 5, src: "/assets/galeri/MengenalOrganisasiTeknikInformatika2025.jpg", caption: "Mengenal Organisasi TI 2025", tag: "Kaderisasi" },
-  { id: 6, src: "/assets/galeri/OpenRecruitmenHIMASANTIKA.jpg", caption: "Open Recruitment HIMASANTIKA", tag: "Kaderisasi" },
-  { id: 7, src: "/assets/galeri/KajianPublicSpeaking2025.jpg", caption: "Kajian Public Speaking 2025", tag: "Pendidikan" },
-  { id: 8, src: "/assets/galeri/StudiBanding1.jpg", caption: "Studi Banding x HIMA-TI UNIKU", tag: "Hubungan Eksternal" },
-  { id: 9, src: "/assets/galeri/StudiBanding2.jpg", caption: "Studi Banding x HIMA-TI UNIKU (2)", tag: "Hubungan Eksternal" },
-  { id: 10, src: "/assets/galeri/StudiBanding3.jpg", caption: "Studi Banding x HIMA-TI UNIKU (3)", tag: "Hubungan Eksternal" },
+  { id: 1, src: "/assets/galeri/PhotoshootStrukturHIMASANTIKA.webp", caption: "Photoshoot Struktur HIMASANTIKA", tag: "Organisasi" },
+  { id: 2, src: "/assets/galeri/BukberdanFamilyGathering1.webp", caption: "Buka Bersama & Family Gathering", tag: "Sosial" },
+  { id: 3, src: "/assets/galeri/BukberdanFamilyGathering.webp", caption: "Buka Bersama & Family Gathering", tag: "Sosial" },
+  { id: 4, src: "/assets/galeri/FotoBersamaRamadhan.webp", caption: "Menyambut Bulan Suci Ramadhan", tag: "Sosial" },
+  { id: 5, src: "/assets/galeri/MengenalOrganisasiTeknikInformatika2025.webp", caption: "Mengenal Organisasi TI 2025", tag: "Kaderisasi" },
+  { id: 6, src: "/assets/galeri/OpenRecruitmenHIMASANTIKA.webp", caption: "Open Recruitment HIMASANTIKA", tag: "Kaderisasi" },
+  { id: 7, src: "/assets/galeri/KajianPublicSpeaking2025.webp", caption: "Kajian Public Speaking 2025", tag: "Pendidikan" },
+  { id: 8, src: "/assets/galeri/StudiBanding1.webp", caption: "Studi Banding x HIMA-TI UNIKU", tag: "Hubungan Eksternal" },
+  { id: 9, src: "/assets/galeri/StudiBanding2.webp", caption: "Studi Banding x HIMA-TI UNIKU", tag: "Hubungan Eksternal" },
+  { id: 10, src: "/assets/galeri/StudiBanding3.webp", caption: "Studi Banding x HIMA-TI UNIKU", tag: "Hubungan Eksternal" },
 ];
 
 const COLORS = { primary: "#0033A0", accent: "#FFD700" };
@@ -23,12 +23,20 @@ const COLORS = { primary: "#0033A0", accent: "#FFD700" };
 const slideVariants = {
   enter: (dir) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 0 }),
   center: { x: 0, opacity: 1, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] } },
-  exit:  (dir) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0, transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] } }),
+  exit: (dir) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0, transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] } }),
 };
 
 export default function GallerySection() {
   const [[current, direction], setCurrent] = useState([0, 0]);
   const total = galleryItems.length;
+  const touchStartX = useRef(null);
+
+  const handleDragEnd = (clientX) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - clientX;
+    if (Math.abs(diff) > 40) paginate(diff > 0 ? 1 : -1);
+    touchStartX.current = null;
+  };
 
   const paginate = useCallback((newDir) => {
     setCurrent(([prev]) => [(prev + newDir + total) % total, newDir]);
@@ -80,10 +88,10 @@ export default function GallerySection() {
             (lebih ringan dari framer-motion)
         ============================================ */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 50, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/*
             Efek timbul: gunakan CSS transition biasa,
@@ -108,8 +116,15 @@ export default function GallerySection() {
               }}
             >
               {/* Slot foto 16:9 */}
-              <div className="relative w-full rounded-2xl overflow-hidden bg-slate-800"
-                style={{ aspectRatio: "16/9" }}>
+              <div
+                className="relative w-full rounded-2xl overflow-hidden bg-slate-800 cursor-grab active:cursor-grabbing"
+                style={{ aspectRatio: "16/9" }}
+                onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+                onTouchEnd={(e) => handleDragEnd(e.changedTouches[0].clientX)}
+                onMouseDown={(e) => { touchStartX.current = e.clientX; }}
+                onMouseUp={(e) => handleDragEnd(e.clientX)}
+                onMouseLeave={() => { touchStartX.current = null; }}
+              >
 
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
                   <motion.div
@@ -129,7 +144,7 @@ export default function GallerySection() {
                       fill
                       priority={current === 0}
                       quality={80}
-                      className="object-cover"
+                      className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1024px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -153,15 +168,6 @@ export default function GallerySection() {
                   </motion.div>
                 </AnimatePresence>
 
-                {/* Arrows */}
-                <button onClick={() => paginate(-1)} aria-label="Sebelumnya"
-                  className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10 p-2 sm:p-3 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm transition-colors duration-150 active:scale-95">
-                  <ChevronLeft size={20} />
-                </button>
-                <button onClick={() => paginate(1)} aria-label="Berikutnya"
-                  className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-10 p-2 sm:p-3 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm transition-colors duration-150 active:scale-95">
-                  <ChevronRight size={20} />
-                </button>
               </div>
             </div>
           </div>
@@ -180,7 +186,7 @@ export default function GallerySection() {
           </div>
 
           {/* Thumbnail strip — lazy load */}
-          <div className="flex gap-2 sm:gap-3 mt-4 justify-center flex-wrap">
+          <div className="flex gap-2 sm:gap-3 mt-6 justify-center flex-wrap bg-white/30 backdrop-blur-md border border-white/40 shadow-lg p-3 rounded-2xl mx-auto max-w-fit">
             {galleryItems.map((g, i) => (
               <button key={g.id} onClick={() => goTo(i)}
                 className="relative shrink-0 rounded-lg overflow-hidden transition-all duration-200"

@@ -4,52 +4,55 @@ import { MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer id="kontak" className="bg-slate-900 text-slate-300 py-12 border-t-4 border-amber-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer id="kontak" className="w-full bg-slate-900 text-slate-300 border-t-4 border-amber-400 px-6 pt-12 pb-24 md:px-12 md:pt-16 md:pb-16">
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-16">
 
           {/* Kolom 1: Tentang */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 bg-white rounded-full p-1 border-2 border-amber-400">
+          <div className="flex flex-col gap-5">
+            <div>
+              <h3 className="text-xl font-bold text-white flex items-center gap-2.5 mb-3">
+                <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+                HIMASANTIKA
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-400 mb-5">
+                Himpunan Mahasiswa Jurusan Teknik Informatika Universitas Muhammadiyah Cirebon. Wadah pengembangan akademik, minat bakat, dan solidaritas mahasiswa.
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="relative w-16 h-16">
                 <Image
                   src="/assets/logos/LogoHIMASANTIKAUMC.png"
                   alt="Logo HIMASANTIKA"
                   fill
-                  className="object-contain p-1"
+                  className="object-contain drop-shadow-lg"
                 />
               </div>
-              <div className="relative w-12 h-12 bg-white rounded-full p-1 border-2 border-amber-400">
+              <div className="relative w-16 h-16">
                 <Image
                   src="/assets/logos/LogoPERMIKOMNAS.png"
                   alt="Logo PERMIKOMNAS"
                   fill
-                  className="object-contain p-1"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-contain drop-shadow-lg"
                 />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-white flex items-center gap-2 mt-4">
-              <span className="w-2 h-2 rounded-full bg-amber-400" />
-              HIMASANTIKA
-            </h3>
-            <p className="text-sm leading-relaxed text-slate-400">
-              Himpunan Mahasiswa Jurusan Teknik Informatika Universitas Muhammadiyah Cirebon. Wadah pengembangan akademik, minat bakat, dan solidaritas mahasiswa.
-            </p>
           </div>
 
           {/* Kolom 2: Tautan Cepat */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-amber-400" />
+          <div className="flex flex-col gap-5">
+            <h3 className="text-xl font-bold text-white flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
               Tautan Kampus
             </h3>
-            <ul className="space-y-2">
+            <ul className="flex flex-col gap-3">
               <li>
                 <a
                   href="https://umc.ac.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm hover:text-amber-400 transition-colors flex items-center gap-2"
+                  className="text-sm hover:text-amber-400 transition-colors flex items-center gap-3"
                 >
                   <ArrowRightIcon /> Universitas Muhammadiyah Cirebon
                 </a>
@@ -59,7 +62,7 @@ export default function Footer() {
                   href="https://ft.umc.ac.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm hover:text-amber-400 transition-colors flex items-center gap-2"
+                  className="text-sm hover:text-amber-400 transition-colors flex items-center gap-3"
                 >
                   <ArrowRightIcon /> Fakultas Teknik UMC
                 </a>
@@ -68,24 +71,24 @@ export default function Footer() {
           </div>
 
           {/* Kolom 3: Kontak & Sosial Media */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-amber-400" />
+          <div className="flex flex-col gap-5">
+            <h3 className="text-xl font-bold text-white flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
               Hubungi Kami
             </h3>
-            <div className="space-y-3">
+            <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3 text-sm">
                 <MapPin size={18} className="text-amber-400 shrink-0 mt-0.5" />
-                <span>
-                  Kampus 1 UMC, Jl. Tujuh Pahlawan Revolusi No. 70, Cirebon, Jawa Barat
+                <span className="leading-relaxed">
+                  Kampus 2 UMC, Jl. Fatahillah, Watubelah, Cirebon, Jawa Barat
                 </span>
               </div>
-              <div className="flex gap-4 mt-4">
+              <div className="flex gap-4 pt-2">
                 <a
                   href="https://www.instagram.com/himasantika_umc/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-slate-800 hover:bg-amber-400 hover:text-slate-900 rounded-full transition-all flex items-center justify-center"
+                  className="p-2.5 bg-slate-800 hover:bg-amber-400 hover:text-slate-900 rounded-full transition-all flex items-center justify-center"
                   aria-label="Instagram"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -98,7 +101,7 @@ export default function Footer() {
                   href="https://www.tiktok.com/@himasantika_umc"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-slate-800 hover:bg-amber-400 hover:text-slate-900 rounded-full transition-all flex items-center justify-center"
+                  className="p-2.5 bg-slate-800 hover:bg-amber-400 hover:text-slate-900 rounded-full transition-all flex items-center justify-center"
                   aria-label="TikTok"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -110,7 +113,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+        <div className="mt-16 pt-8 pb-24 md:pb-0 border-t border-slate-800 text-center text-sm text-slate-500">
           <p>© {new Date().getFullYear()} HIMASANTIKA UMC. All rights reserved.</p>
         </div>
       </div>
