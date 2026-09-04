@@ -147,7 +147,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 + "Kreativitas, Solidaritas,".length * 0.04 + 0.3, duration: 0.8, type: "spring" }}
-              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 drop-shadow-[0_4px_12px_rgba(251,191,36,0.4)]"
+              className="inline-block text-[#C3503B] drop-shadow-[0_4px_12px_rgba(251,191,36,0.4)]"
             >
               & Inovasi.
             </motion.span>
