@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HIMASANTIKA UMC - Website Company Profile
 
-## Getting Started
+Selamat datang di repositori website resmi HIMASANTIKA (Himpunan Mahasiswa Jurusan Teknik Informatika) Universitas Muhammadiyah Cirebon.
 
-First, run the development server:
+## 🎨 Konsep Desain
+Website ini dirancang dengan pendekatan **Modern, Clean, dan Interaktif**. Berikut adalah beberapa poin utama dari konsep desain yang digunakan:
+- **Identitas Warna**: Menggunakan kombinasi warna Biru Dongker Gelap (`#101869`) sebagai warna primer yang melambangkan profesionalisme dan teknologi, serta Kuning/Emas (`#FFD700`) sebagai aksen yang melambangkan semangat dan kejayaan HIMASANTIKA.
+- **Micro-interactions & Animasi**: Diperkaya dengan animasi transisi yang mulus (*smooth scrolling*, efek *fade-in*, *wipe-up* pada *splash screen*, dan *carousel* geser/swipe) untuk memberikan pengalaman pengguna yang premium dan tidak membosankan.
+- **Glassmorphism**: Penggunaan efek *blur* transparan pada beberapa elemen latar belakang (seperti *navbar* dan kartu galeri) memberikan kedalaman visual dan estetika modern.
+- **Responsif**: Tata letak dioptimalkan sepenuhnya untuk berbagai ukuran layar, mulai dari perangkat seluler (*mobile-first*) hingga monitor desktop lebar.
 
+## 💻 Teknologi (Framework & Library)
+Proyek ini dibangun menggunakan teknologi web modern terkini:
+- **[Next.js](https://nextjs.org/) (v16)**: Framework React untuk rendering dan *routing* aplikasi yang cepat.
+- **[React](https://react.dev/) (v19)**: Library utama untuk membangun antarmuka pengguna (UI).
+- **[Tailwind CSS](https://tailwindcss.com/) (v4)**: Framework CSS *utility-first* untuk styling yang fleksibel dan cepat.
+- **[Framer Motion](https://www.framer.com/motion/)**: Library animasi untuk membuat pergerakan elemen yang dinamis dan interaktif.
+- **[Lucide React](https://lucide.dev/)**: Kumpulan ikon yang minimalis dan konsisten.
+
+## 🚀 Langkah-langkah Menjalankan Website (Lokal)
+
+Ikuti langkah-step di bawah ini untuk menginstal dan menjalankan website ini di komputer lokal Anda:
+
+### 1. Prasyarat (Prerequisites)
+Pastikan Anda sudah menginstal:
+- **Node.js** (versi 18.x atau terbaru)
+- **npm** (Node Package Manager)
+
+### 2. Instalasi Dependensi
+Buka terminal/Command Prompt, lalu jalankan perintah berikut di dalam folder proyek ini:
+```bash
+npm install
+```
+*Perintah ini akan mengunduh dan menginstal semua library/package yang dibutuhkan oleh proyek.*
+
+### 3. Menjalankan Server Development
+Setelah proses instalasi selesai, jalankan server pengembangan (development server) dengan perintah:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Buka di Browser
+Buka aplikasi browser Anda (Chrome, Edge, Safari, dll.) dan kunjungi tautan berikut:
+```text
+http://localhost:3000
+```
+Website HIMASANTIKA akan tampil di layar Anda dan siap untuk dikembangkan!

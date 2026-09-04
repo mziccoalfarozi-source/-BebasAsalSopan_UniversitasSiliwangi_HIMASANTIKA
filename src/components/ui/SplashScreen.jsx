@@ -18,7 +18,7 @@ import Image from "next/image";
 // 3.0s — seluruh splash exit (wipe up)
 
 const TITLE = "HIMASANTIKA";
-const PRIMARY = "#0033A0";
+const PRIMARY = "#101869";
 const ACCENT = "#FFD700";
 
 export default function SplashScreen({ onFinish }) {
