@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 import { motion } from "framer-motion";
 import { Handshake, Send, Building2, Calendar, Mail, FileText } from "lucide-react";
@@ -6,6 +7,24 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export default function PartnershipPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate sending data
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      // Reset success message after 3 seconds
+      setTimeout(() => setIsSuccess(false), 3000);
+      
+      // Optionally reset form here, but for now we just show success
+      e.target.reset();
+    }, 1500);
+  };
+
   return (
     <>
       <Navbar />
@@ -38,7 +57,7 @@ export default function PartnershipPage() {
             className="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden"
           >
             <div className="p-6 sm:p-10">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 
                 {/* Organisasi & Acara (Grid 2 Kolom) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -126,12 +145,17 @@ export default function PartnershipPage() {
                 {/* Submit Button */}
                 <div className="pt-4">
                   <button 
-                    type="button" // Gunakan type="button" sementara karena belum ada backend
-                    onClick={() => alert("Fitur submit formulir sedang dalam tahap pengembangan. Silakan hubungi via DM Instagram/WhatsApp.")}
-                    className="w-full flex items-center justify-center gap-2 bg-[#101869] hover:bg-[#0c1354] text-white px-6 py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-blue-900/20"
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center gap-2 bg-[#101869] hover:bg-[#0c1354] text-white px-6 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-blue-900/20 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <span>Kirim Pengajuan</span>
-                    <Send size={20} />
+                    {isSubmitting ? (
+                      <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    ) : isSuccess ? (
+                      <>Terkirim!</>
+                    ) : (
+                      <><span>Kirim Pengajuan</span><Send size={20} /></>
+                    )}
                   </button>
                 </div>
 
