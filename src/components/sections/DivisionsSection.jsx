@@ -16,7 +16,7 @@ const divisions = [
     fullName: "Badan Pengurus Harian",
     description:
       "Pimpinan tertinggi HIMASANTIKA yang terdiri dari Bupati, Wakil Bupati, Sekretaris, Bendahara, dan jajarannya. Bertanggung jawab atas arah gerak dan administrasi organisasi secara keseluruhan.",
-    image: "/assets/logos/DepartemenPO.png",
+    image: "/assets/logos/DepartemenPO.webp",
     members: "6 Jabatan",
     color: "#101869",
     detail:
@@ -28,11 +28,11 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/bph/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/bph/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/bph/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/bph/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/bph/5.jpg" },
-      { nama: "Media 6", jabatan: "", photo: "/assets/galeri/divisi/bph/6.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/bph/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/bph/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/bph/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/bph/5.webp" },
+      { nama: "Media 6", jabatan: "", photo: "/assets/galeri/divisi/bph/6.webp" },
     ],
   },
   {
@@ -40,7 +40,7 @@ const divisions = [
     fullName: "Lembaga Advokasi Mahasiswa",
     description:
       "Menampung dan menyalurkan aspirasi mahasiswa melalui forum internal, serta berkoordinasi dengan Kaprodi S1 Teknik Informatika untuk penindaklanjutan.",
-    image: "/assets/logos/LembagaAdvokasi.png",
+    image: "/assets/logos/LembagaAdvokasi.webp",
     members: "Koordinasi Rutin",
     color: "#C3503B",
     detail:
@@ -52,10 +52,10 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/5.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Advokesma/5.webp" },
     ],
   },
   {
@@ -63,7 +63,7 @@ const divisions = [
     fullName: "Lembaga Minat dan Bakat",
     description:
       "Mengembangkan minat dan bakat profesi jurusan, mendata mahasiswa berbakat di bidang teknologi, dan menyalurkannya ke berbagai perlombaan.",
-    image: "/assets/logos/LembagaMinatBakat.png",
+    image: "/assets/logos/LembagaMinatBakat.webp",
     members: "Porseni & Lomba",
     color: "#101869",
     detail:
@@ -75,10 +75,10 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/5.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/MinatBakat/5.webp" },
     ],
   },
   {
@@ -86,7 +86,7 @@ const divisions = [
     fullName: "Departemen Kaderisasi",
     description:
       "Menyusun dan melaksanakan SOP kaderisasi HIMASANTIKA serta meningkatkan kualitas kaderisasi untuk mencetak pengurus yang berkompeten.",
-    image: "/assets/logos/DepartemenKaderisasi.png",
+    image: "/assets/logos/DepartemenKaderisasi.webp",
     members: "SOP & Pelatihan",
     color: "#C3503B",
     detail:
@@ -98,11 +98,11 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/5.jpg" },
-      { nama: "Media 6", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/6.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/5.webp" },
+      { nama: "Media 6", jabatan: "", photo: "/assets/galeri/divisi/Kaderisasi/6.webp" },
     ],
   },
   {
@@ -110,7 +110,7 @@ const divisions = [
     fullName: "Dokumentasi, Komunikasi & Informasi",
     description:
       "Pusat informasi dan komunikasi yang mengelola media sosial, meliput kegiatan, dan membuat KTP pengurus sebagai identitas resmi.",
-    image: "/assets/logos/DepartemenDokominfo.png",
+    image: "/assets/logos/DepartemenDokominfo.webp",
     members: "Media & Publikasi",
     color: "#101869",
     detail:
@@ -122,10 +122,10 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/5.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/dokominfo/5.webp" },
     ],
   },
   {
@@ -133,7 +133,7 @@ const divisions = [
     fullName: "Pengembangan Organisasi",
     description:
       "Mengadakan evaluasi per departemen, kajian AD/ART, dan merancang SOP organisasi sesuai dengan pedoman yang telah ditetapkan.",
-    image: "/assets/logos/DepartemenPO.png",
+    image: "/assets/logos/DepartemenPO.webp",
     members: "Evaluasi & SOP",
     color: "#C3503B",
     detail:
@@ -145,10 +145,10 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/PO/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/PO/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/PO/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/PO/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/PO/5.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/PO/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/PO/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/PO/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/PO/5.webp" },
     ],
   },
   {
@@ -156,7 +156,7 @@ const divisions = [
     fullName: "Pendidikan Mahasiswa",
     description:
       "Berkoordinasi dengan Kaprodi mengenai akademik dan mengadakan workshop, seminar, serta bootcamp untuk mengembangkan profesi jurusan.",
-    image: "/assets/logos/DepartemenDikmas.png",
+    image: "/assets/logos/DepartemenDikmas.webp",
     members: "Workshop & Seminar",
     color: "#101869",
     detail:
@@ -168,10 +168,10 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/5.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/DIKMAS/5.webp" },
     ],
   },
   {
@@ -179,7 +179,7 @@ const divisions = [
     fullName: "Hubungan Eksternal & Sosial",
     description:
       "Mengabdikan diri kepada masyarakat, menjalin relasi dengan ormawa UMC, dan menjadi sumber informasi terkait PERMIKOMNAS.",
-    image: "/assets/logos/DepartemenHubeksos.png",
+    image: "/assets/logos/DepartemenHubeksos.webp",
     members: "Eksternal & Sosial",
     color: "#C3503B",
     detail:
@@ -191,10 +191,10 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/hubeksos/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/hubeksos/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/hubeksos/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/hubeksos/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/hubeksos/5.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/Hubeksos/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Hubeksos/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Hubeksos/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Hubeksos/5.webp" },
     ],
   },
   {
@@ -202,7 +202,7 @@ const divisions = [
     fullName: "Bisnis dan Kemitraan",
     description:
       "Membangun relasi dengan mitra strategis, menjadi badan usaha milik himpunan, dan mencari dana halal untuk kemajuan HIMASANTIKA.",
-    image: "/assets/logos/DepartemenBismit.png",
+    image: "/assets/logos/DepartemenBismit.webp",
     members: "Kemitraan & Dana",
     color: "#101869",
     detail:
@@ -214,10 +214,10 @@ const divisions = [
     ],
     anggota: [
       { nama: "Media 1", jabatan: "", photo: "/assets/galeri/divisi/Bismit/1.mp4" },
-      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/Bismit/2.jpg" },
-      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Bismit/3.jpg" },
-      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Bismit/4.jpg" },
-      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Bismit/5.jpg" },
+      { nama: "Media 2", jabatan: "", photo: "/assets/galeri/divisi/Bismit/2.webp" },
+      { nama: "Media 3", jabatan: "", photo: "/assets/galeri/divisi/Bismit/3.webp" },
+      { nama: "Media 4", jabatan: "", photo: "/assets/galeri/divisi/Bismit/4.webp" },
+      { nama: "Media 5", jabatan: "", photo: "/assets/galeri/divisi/Bismit/5.webp" },
     ],
   },
 ];

@@ -154,7 +154,7 @@ function LogoBadge() {
           className="relative w-20 h-20"
         >
           <Image 
-            src="/assets/logos/LogoHIMASANTIKAUMC.png" 
+            src="/assets/logos/LogoHIMASANTIKAUMC.webp" 
             alt="Logo HIMASANTIKA" 
             fill 
             className="object-contain" 

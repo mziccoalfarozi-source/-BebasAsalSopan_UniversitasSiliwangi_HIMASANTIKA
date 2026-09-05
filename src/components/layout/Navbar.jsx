@@ -59,7 +59,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
           <div className="relative w-8 h-8 sm:w-10 sm:h-10">
             <Image
-              src="/assets/logos/LogoHIMASANTIKAUMC.png"
+              src="/assets/logos/LogoHIMASANTIKAUMC.webp"
               alt="Logo HIMASANTIKA"
               fill
               className="object-contain transition-transform duration-300 group-hover:scale-110"

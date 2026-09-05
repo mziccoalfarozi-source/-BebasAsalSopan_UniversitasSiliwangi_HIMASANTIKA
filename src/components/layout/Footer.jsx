@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <div className="relative w-16 h-16">
                 <Image
-                  src="/assets/logos/LogoHIMASANTIKAUMC.png"
+                  src="/assets/logos/LogoHIMASANTIKAUMC.webp"
                   alt="Logo HIMASANTIKA"
                   fill
                   className="object-contain drop-shadow-lg"
@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
               <div className="relative w-16 h-16">
                 <Image
-                  src="/assets/logos/LogoPERMIKOMNAS.png"
+                  src="/assets/logos/LogoPERMIKOMNAS.webp"
                   alt="Logo PERMIKOMNAS"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
